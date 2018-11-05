@@ -52,6 +52,8 @@ namespace Logging.Domain.Loggers
             var logRepository = log4net.LogManager.GetRepository(assembly);
             _repositoryName = logRepository.Name;
 
+            // could be called with no arguments, but called this way
+            // to match the version available for .NET Standard
             log4net.Config.XmlConfigurator.Configure(
                 logRepository,
                 new FileInfo("log4net.common.config"));
