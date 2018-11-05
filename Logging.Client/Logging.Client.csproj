@@ -50,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Logging.Domain.Common\Logging.Domain.Common.csproj">
+      <Project>{1B4DF93C-5C54-48DC-AB53-5369659FFF05}</Project>
+      <Name>Logging.Domain.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Logging.Domain\Logging.Domain.csproj">
       <Project>{C8449F5A-B6CF-4525-A7D2-F1B9B5233FEB}</Project>
       <Name>Logging.Domain</Name>
