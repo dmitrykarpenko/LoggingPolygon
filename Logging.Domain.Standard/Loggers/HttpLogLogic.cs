@@ -14,6 +14,7 @@ namespace Logging.Domain.Standard.Loggers
 {
     public class HttpLogLogic : ILogLogic, IDisposable
     {
+        // TODO: consider injecting from a config file
         private const string _logResultsUrl = "http://localhost:55154/api/LogResults";
 
         private readonly HttpClient _httpClient;
@@ -38,11 +39,15 @@ namespace Logging.Domain.Standard.Loggers
             // TODO: consider batching
             var logRecordsModel = new LogRecordsModel { LogRecords = new[] { logRecord } };
 
-            var result = Post(_logResultsUrl, logRecordsModel).Result;
+            // fire and forget
+            Task.Run(
+                async () =>
+                {
+                    var result = await Post(_logResultsUrl, logRecordsModel);
+                    var resultString = await result.Content.ReadAsStringAsync();
 
-            var resultString = result.Content.ReadAsStringAsync().Result;
-
-            //Task.Run(() => Post(_logResultsUrl, logRecords));
+                    // TODO: consider adding result analysis
+                });
         }
 
         private Task<HttpResponseMessage> Post(string url, object data)

@@ -28,6 +28,10 @@ namespace Logging.Client
             _customHttpLog.Log("Hello World (http, custom)! " + DateTime.Now);
 
             Console.WriteLine("Hello World!");
+
+            // required to wait until a "fire and forget" HTTP request
+            // will reach the endpoint and come back
+            Console.ReadLine();
         }
     }
 }
