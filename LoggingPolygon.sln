@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging.Domain.Common", "Lo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging.Domain.Classic", "Logging.Domain.Classic\Logging.Domain.Classic.csproj", "{C8449F5A-B6CF-4525-A7D2-F1B9B5233FEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging.Domain.Standard", "Logging.Domain.Standard\Logging.Domain.Standard.csproj", "{B7F19502-73FF-4C02-B4E9-4381C2F8F806}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{C8449F5A-B6CF-4525-A7D2-F1B9B5233FEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8449F5A-B6CF-4525-A7D2-F1B9B5233FEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8449F5A-B6CF-4525-A7D2-F1B9B5233FEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7F19502-73FF-4C02-B4E9-4381C2F8F806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7F19502-73FF-4C02-B4E9-4381C2F8F806}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7F19502-73FF-4C02-B4E9-4381C2F8F806}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7F19502-73FF-4C02-B4E9-4381C2F8F806}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

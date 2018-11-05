@@ -58,6 +58,10 @@
       <Project>{1B4DF93C-5C54-48DC-AB53-5369659FFF05}</Project>
       <Name>Logging.Domain.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Logging.Domain.Standard\Logging.Domain.Standard.csproj">
+      <Project>{B7F19502-73FF-4C02-B4E9-4381C2F8F806}</Project>
+      <Name>Logging.Domain.Standard</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

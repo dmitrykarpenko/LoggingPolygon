@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Logging.Domain.Common.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Logging.Web.Controllers
@@ -10,8 +11,9 @@ namespace Logging.Web.Controllers
     public class LogResultsController
     {
         //[HttpPost]
-        public void Post(/*[FromBody] */string value)
+        public ActionResult<string> Post([FromBody] LogRecordsModel logRecordsModel)
         {
+            return $"preserved log records: {logRecordsModel}";
         }
     }
 }
